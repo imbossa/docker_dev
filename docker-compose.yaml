@@ -90,8 +90,8 @@ services:
       - REDIS_PASSWORD=${REDIS_PASSWORD}
       - REDIS_REPLICATION_MODE=master
     volumes:
-      - "${LOCAL_STOARGE_PATH}/redis/conf.d/redis.conf:/opt/bitnami/redis/etc/redis.conf"
-      - "${LOCAL_STOARGE_PATH}/redis/db:/bitnami/redis/data"
+      - "${LOCAL_STOARGE_PATH}/app/redis/conf.d/redis.conf:/opt/bitnami/redis/etc/redis.conf"
+      - "${LOCAL_STOARGE_PATH}/app/redis/db:/bitnami/redis/data"
     networks:
       my_dc_net:
         ipv4_address: ${IPV4_PREFIX:-"172.28.1."}14
