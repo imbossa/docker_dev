@@ -138,6 +138,20 @@ services:
         hard: 65535
     container_name: ${CONTAINER_PRIFIX:-"com_"}mongo
     restart: always
+  memcached:
+    image: ${MEMCACHED_VERSION}
+    environment:
+      - MEMCACHED_USERNAME=${MEMCACHED_USERNAME}
+      - MEMCACHED_PASSWORD=${MEMCACHED_PASSWORD}
+    volumes:
+    - "${LOCAL_STOARGE_PATH}/app/memcached/logs:/opt/bitnami/memcached/logs"
+    container_name: memcached
+    ports:
+      - "11211:11211"
+    networks:
+      my_dc_net:
+        ipv4_address: ${IPV4_PREFIX:-"172.28.1."}17
+    restart: always
 networks:
   my_dc_net:
     name: ${NETWORK_EXT_NAME:-"my_net_dev"}
