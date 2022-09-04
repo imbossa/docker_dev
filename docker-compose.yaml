@@ -121,7 +121,6 @@ services:
     volumes:
       - "${LOCAL_STOARGE_PATH}/app/mongo/config/mongodb.conf:/opt/bitnami/mongodb/conf/mongodb.conf"
       - "${LOCAL_STOARGE_PATH}/app/mongo/db:/bitnami"
-      - "mongo_vol:/bitnami"
       - "${LOCAL_STOARGE_PATH}/app/mongo/logs:/opt/bitnami/mongodb/logs"
     networks:
       my_dc_net:
