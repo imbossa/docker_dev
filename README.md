@@ -16,6 +16,11 @@ second ：
 ```
 docker-composer up -d
 ```
+Because you put memcached in the profile configuration, you need to include the following command to start memcached
+```
+docker-compose --profile memcached up -d
+```
+
 
 ## Link
 |               |      in server      |      in host      | out host |

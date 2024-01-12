@@ -145,6 +145,8 @@ services:
     volumes:
     - "${LOCAL_STORAGE_PATH}/app/memcached/logs:/opt/bitnami/memcached/logs"
     container_name: ${CONTAINER_PREFIX:-"com_"}memcached
+    profiles:
+      - memcached
     ports:
       - "11211:11211"
     networks:
