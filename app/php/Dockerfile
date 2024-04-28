@@ -5,7 +5,7 @@ LABEL maintainer="bossa"
 
 ENV GIT_SSL_NO_VERIFY true
 
-ENV SWOOLE_VERSION 4.8.6
+ENV SWOOLE_VERSION 5.1.2
 ENV EXT_MONGODB_VERSION 1.12.0
 ENV EXT_REDIS_VERSION 5.3.6
 ENV EXT_TIDEWAYS_XHPROF_VERSION 5.0.2
@@ -52,7 +52,7 @@ RUN apt-get update -y && \
     tmux \
     keychain \
     net-tools \
-    python \
+    python3 \
     supervisor \
     cron \
     iputils-ping \

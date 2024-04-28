@@ -14,7 +14,7 @@ cp .env.example .env
 
 second ：
 ```
-docker-composer up -d
+docker-compose up -d
 ```
 Because you put memcached in the profile configuration, you need to include the following command to start memcached
 ```
